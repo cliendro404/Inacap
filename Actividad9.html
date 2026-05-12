@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ACT9</title>
+</head>
+<body>
+
+    <h2>Lista de Alumnos</h2>
+
+    <input type="text" id="nombre" placeholder="Nombre">
+
+    <button onclick="agregar()">Agregar</button>
+    <button onclick="actualizar()">Actualizar</button>
+    <button onclick="eliminar()">Eliminar</button>
+
+    <ul id="lista"></ul>
+
+    <script>
+
+        let alumnos = [];
+
+        function mostrar() {
+
+            let lista = document.getElementById("lista");
+            lista.innerHTML = "";
+
+            alumnos.forEach((alumno, index) => {
+
+                lista.innerHTML += `
+                    <li>${index} - ${alumno}</li>
+                `;
+            });
+        }
+
+        function agregar() {
+
+            let nombre = document.getElementById("nombre").value;
+
+            alumnos.push(nombre);
+
+            mostrar();
+        }
+
+        function actualizar() {
+
+            let nombre = document.getElementById("nombre").value;
+
+            alumnos[0] = nombre;
+
+            mostrar();
+        }
+
+        function eliminar() {
+
+            alumnos.splice(0, 1);
+
+            mostrar();
+        }
+
+    </script>
+
+</body>
+</html>
