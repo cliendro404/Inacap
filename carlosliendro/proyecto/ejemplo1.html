@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo 1 - Validacion Formulario</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<h2>Ejemplo 1 - Validacion de Formulario</h2>
+
+<form>
+    <label>Nombre:</label>
+    <input type="text" id="nombre" placeholder="Ingrese su nombre">
+
+    <label>Apellido:</label>
+    <input type="text" id="apellido" placeholder="Ingrese su apellido">
+
+    <div class="checkboxes">
+        <input type="checkbox" id="check1">
+        <label for="check1">Acepto los terminos y condiciones</label>
+    </div>
+
+    <div class="checkboxes">
+        <input type="checkbox" id="check2">
+        <label for="check2">Soy mayor de edad</label>
+    </div>
+
+    <label>Ciudad:</label>
+    <select id="ciudad">
+        <option value="">-- Seleccione --</option>
+        <option value="santiago">Santiago</option>
+        <option value="valparaiso">Valparaiso</option>
+        <option value="concepcion">Concepcion</option>
+    </select>
+
+    <button type="button" onclick="validarFormulario()">Enviar</button>
+</form>
+
+<div id="miModal" class="modal" style="display: none;">
+    <div class="modal-contenido">
+        <h3>Formulario enviado!</h3>
+        <p id="modal-texto">Todos los datos fueron ingresados correctamente.</p>
+        <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+</div>
+
+
+<script src="../js/script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo 3 - Modificar CSS con JS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #cajaPrueba {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        .botones-grupo button {
+            margin: 5px;
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Ejemplo 3 - Modificar propiedades CSS con JavaScript</h2>
+
+<div id="cajaPrueba">
+    Este es el elemento que se va a modificar
+</div>
+
+<div class="botones-grupo">
+    <button onclick="cambiarTamano()">Cambiar Tamaño</button>
+    <button onclick="cambiarColor()">Cambiar Color</button>
+    <button onclick="ocultarMostrar()">Ocultar / Mostrar</button>
+    <button onclick="cambiarBorde()">Cambiar Borde</button>
+    <button onclick="resetear()" style="background-color: #e74c3c;">Resetear</button>
+</div>
+
+
+<script src="../js/script3.js"></script>
+</body>
+</html>
